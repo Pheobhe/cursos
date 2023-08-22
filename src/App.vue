@@ -1,26 +1,73 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+ <!-- <h1>Practica Componentes dinámicos</h1> -->
+ <div class="header">
+  <h3 class="header__lista">Vue Cursos</h3>
+    <ul class="header__lista">
+        <li class="header__lista__item">
+          <a 
+            href="#"
+            class="header__lista__item__link">
+            opción 1
+        </a>
+        </li>
+        <li class="header__lista__item">
+          <a 
+            href="#"
+            class="header__lista__item__link"> 
+            opción 2
+          </a>
+        </li>
+        <li class="header__lista__item">
+          <a 
+            href="#"
+            class="header__lista__item__link"> 
+            opción 3 
+          </a>
+        </li>
+    </ul>
+ </div>
+
+ <div> 
+  <lista-cursos />
+  <lista-profesores />
+</div>
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
+import ListaCursos from '@/components/cursos/ListaCursos'
+import ListaProfesores from '@/components/cursos/ListaProfesores'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    ListaCursos,
+    ListaProfesores
   }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+
+*{
+  margin: 0px;
+  padding: 0px;
+}
+.header {
+  padding: 1em;
+  border: 1px solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__lista{
+     display: flex;
+     list-style: none;
+     padding: 0;
+     margin: 0;
+     &__item{
+      padding: 1em;
+
+     }
+  }
 }
 </style>
