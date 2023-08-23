@@ -1,6 +1,7 @@
 <template>
     <div>
-        <lista-cursos />
+        <lista-cursos 
+        titulo="Lista de Cursos"/>
     </div>
 </template>
 

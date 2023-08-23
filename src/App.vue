@@ -10,6 +10,12 @@
       class="link"> 
       Profesores
   </router-link >
+
+    <router-link  
+      :to="{ name: 'alumnos' }" 
+      class="link"> 
+      Alumnos
+  </router-link >
   </div>
 
   <div>
