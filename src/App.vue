@@ -5,21 +5,21 @@
     <ul class="header__lista">
         <li class="header__lista__item">
           <a 
-            href="#"
+            @click="mostrarComponente('lista-cursos', 'Lista de Cursos')"
             class="header__lista__item__link">
             Cursos
         </a>
         </li>
         <li class="header__lista__item">
           <a 
-            href="#"
+          @click="mostrarComponente('lista-profesores', 'Lista de Profesores')"
             class="header__lista__item__link"> 
             Profesores
           </a>
         </li>
         <li class="header__lista__item">
           <a 
-            href="#"
+          @click="mostrarComponente('contactos-cursos', 'Formulario de Contacto')"
             class="header__lista__item__link"> 
             Contactos
           </a>
@@ -27,17 +27,12 @@
     </ul>
  </div>
 
- <div> 
-  <lista-cursos 
-  titulo="Listado de Cursos"
-  />
-  <lista-profesores 
-  titulo="Listado de Profesores"
-  />
-  <contactos-cursos
-    titulo="Formulario de Contacto"
-  />
-</div>
+ <keep-alive>   <!-- almacena en cache la info cuando navego de un item a otro -->
+    <component 
+      :is="componentSelect"
+      :titulo="propComponent"
+      />
+ </keep-alive>
 
 </template>
 
@@ -48,11 +43,23 @@ import ListaProfesores from '@/components/cursos/ListaProfesores'
 import ContactosCursos from '@/components/cursos/ContactosCursos'
 export default {
   name: 'App',
+  data() {
+    return {
+      componentSelect: null,
+      propComponent: ''
+     }
+   },
   components: {
     ListaCursos,
     ListaProfesores,
     ContactosCursos
-  }
+  },
+  methods: {
+      mostrarComponente: function (componente, propiedad){
+       this.componentSelect = componente
+       this.propComponent = propiedad
+      }
+    }  
 }
 </script>
 
