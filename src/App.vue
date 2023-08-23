@@ -1,30 +1,33 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div>
+    <router-link 
+      :to="{ name: 'cursos' }"
+      class="link"> 
+      Cursos
+  </router-link>
+    <router-link  
+      :to="{ name: 'profesores' }" 
+      class="link"> 
+      Profesores
+  </router-link >
+  </div>
+
+  <div>
+  <router-view /> 
+
+  </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
 
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+  export default {
+    name: 'App',
   }
-}
+</script>
+
+
+<style lang="scss">
+ .link{
+   padding: 1em;
+ }
 </style>
