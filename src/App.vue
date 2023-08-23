@@ -7,29 +7,36 @@
           <a 
             href="#"
             class="header__lista__item__link">
-            opción 1
+            Cursos
         </a>
         </li>
         <li class="header__lista__item">
           <a 
             href="#"
             class="header__lista__item__link"> 
-            opción 2
+            Profesores
           </a>
         </li>
         <li class="header__lista__item">
           <a 
             href="#"
             class="header__lista__item__link"> 
-            opción 3 
+            Contactos
           </a>
         </li>
     </ul>
  </div>
 
  <div> 
-  <lista-cursos />
-  <lista-profesores />
+  <lista-cursos 
+  titulo="Listado de Cursos"
+  />
+  <lista-profesores 
+  titulo="Listado de Profesores"
+  />
+  <contactos-cursos
+    titulo="Formulario de Contacto"
+  />
 </div>
 
 </template>
@@ -38,11 +45,13 @@
 
 import ListaCursos from '@/components/cursos/ListaCursos'
 import ListaProfesores from '@/components/cursos/ListaProfesores'
+import ContactosCursos from '@/components/cursos/ContactosCursos'
 export default {
   name: 'App',
   components: {
     ListaCursos,
-    ListaProfesores
+    ListaProfesores,
+    ContactosCursos
   }
 }
 </script>

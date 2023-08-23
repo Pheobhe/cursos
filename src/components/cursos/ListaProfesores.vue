@@ -1,5 +1,6 @@
 <template>
     <div class="profesores">
+        <h3> {{ titulo }} </h3>
         <v-lista 
             :lista="lista"
         />
@@ -12,6 +13,9 @@ import VLista from '@/components/base/VLista'
 
     export default {
         name: 'ListaProfesores',
+        props:{
+            titulo: String
+        },
         components: {
             VLista
             
