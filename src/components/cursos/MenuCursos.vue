@@ -13,6 +13,10 @@
                 <router-link :to="{name: 'alumnosc'}"
                >Curso C</router-link>
             </li>
+            <li>
+                <router-link :to="{name: 'alumnosd', params:{'codigo': 30 }}"
+               >Curso D</router-link>
+            </li>
         </ul>
     </div>
 </template>

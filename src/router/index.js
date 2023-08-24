@@ -6,6 +6,9 @@ import AlumnosPage from '@/views/alumnos/AlumnosPage'
 import AlumnosA from '@/views/alumnos/AlumnosA'
 import AlumnosB from '@/views/alumnos/AlumnosB'
 import AlumnosC from '@/views/alumnos/AlumnosC'
+import AlumnosD from '@/views/alumnos/AlumnosD'
+import ContactoPage from '@/views/alumnos/ContactoPage'
+
 const routes = [
  
   {
@@ -37,9 +40,22 @@ const routes = [
         path:'/alumnos-c',
         component: AlumnosC,
         name: 'alumnosc'
+      },
+      {
+        path:'/alumnos-d/:codigo',
+        component: AlumnosD,
+        name: 'alumnosd'
       }
+     
     ]
+    
   } ,
+  
+  {
+    path:'/contacto',
+    component: ContactoPage,
+    name: 'contacto'
+  }
   
 ]
 
