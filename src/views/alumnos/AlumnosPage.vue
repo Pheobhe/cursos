@@ -1,19 +1,24 @@
 <template>
     <div class="alumnos">
         <div class="alumnos__left">
-              aca un menu
+              <menu-cursos />
         </div>
 
         <div class="alumnos__right">
-            aca contenido de cada op del menu
+            <router-view/>
         </div>
 
     </div>
 </template>
 
 <script>
+
+import MenuCursos from '@/components/cursos/MenuCursos'
     export default {
-        name: 'AlumnosPage'
+        name: 'AlumnosPage',
+        components: {
+          MenuCursos
+        }
     }
 </script>
 
@@ -25,6 +30,7 @@
     border: 1px solid black;
   }
   &__right {
+    border: 1px solid black;
     width: 70%;
   }
  
