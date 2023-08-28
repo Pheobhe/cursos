@@ -14,7 +14,7 @@
                >Curso C</router-link>
             </li>
             <li>
-                <router-link :to="{name: 'alumnosd', params:{'codigo': 30 }}"
+                <router-link :to="{name: 'alumnosd', params:{'codigo': 30 },query:{texto: [1,2,3,4]}}"
                >Curso D</router-link>
             </li>
         </ul>

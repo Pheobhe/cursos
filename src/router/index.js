@@ -44,7 +44,9 @@ const routes = [
       {
         path:'/alumnos-d/:codigo',
         component: AlumnosD,
-        name: 'alumnosd'
+        name: 'alumnosd',
+        query: null
+
       }
      
     ]

@@ -19,6 +19,7 @@
             },
             recuperarParametro: function() {
                console.log(this.$route.params.codigo)
+               console.log(this.$route.query.texto)
             }
         }
     }
