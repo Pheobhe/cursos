@@ -24,12 +24,12 @@ const routes = [
   {
     path:'/alumnos',
     component: AlumnosPage,
-    name: 'alumnos',
+   // name: 'alumnos', le saco el path a alimnos A para que directamente muestre el contenido
     children: [
       {
-        path:'/alumnos-a',
+        path:'',
         component: AlumnosA,
-        name: 'alumnosa'
+        name: 'alumnos'
       },
       {
         path:'/alumnos-b',

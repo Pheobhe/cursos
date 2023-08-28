@@ -2,7 +2,7 @@
     <div>
         <ul>
             <li>
-                <router-link :to="{name: 'alumnosa'}"
+                <router-link :to="{name: 'alumnos'}"
                >Curso A</router-link>
             </li>
             <li>
@@ -20,4 +20,13 @@
         </ul>
     </div>
 </template>
+<style lang="scss">
+
+    .router-link-active{
+        color:red
+    }
+    .router-link-exact-active{
+        color: greenyellow;
+    }
+</style>
 

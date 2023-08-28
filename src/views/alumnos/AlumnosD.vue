@@ -4,7 +4,8 @@
     <div class="alumnos__right">
         <h3>Somos los alumnos  del D</h3>
         <p>{{ $route.params.codigo}}</p>
-        <button class="btn" @click="irUrl()"> Inscribirse aca </button> 
+        <button class="btn" @click="irUrl()"> Inscribirse aca </button>
+        <button class="btn" @click="recuperarParametro()"> Recuperar </button>  
     </div>
     </div>
 </template>
@@ -15,6 +16,9 @@
         methods: {
             irUrl:function() {
                 this.$router.push({ name: 'contacto'})
+            },
+            recuperarParametro: function() {
+               console.log(this.$route.params.codigo)
             }
         }
     }
