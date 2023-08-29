@@ -1,0 +1,21 @@
+$color1: #212121;
+$color2: #ff9f1a;
+$color3: #18dcff;
+$color4: #c56cf0;
+$color5: #3ae374;
+$color-white: white;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@1,200&family=Ubuntu:wght@300&display=swap');
+$ff-primary:  'Chivo Mono', monospace;
+$ff-secondary: 'Ubuntu', sans-serif;
+
+
+:export {
+    c1: $color1;
+    c2: $color2;
+    c3: $color3;
+    c4: $color4;
+    c5: $color5;
+    cb: $color-white;
+};
