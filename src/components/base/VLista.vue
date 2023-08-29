@@ -4,7 +4,10 @@
             class="lista__item"
             v-for="elemento in lista"
             :key="elemento.id">
+            <router-link :to="{ name: 'cursos-detail', params: {id:elemento.id}}"
+            class="lista_item_link" >
              {{ elemento.name }}
+             </router-link>
         </li>
 
       </ul>

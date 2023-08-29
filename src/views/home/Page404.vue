@@ -35,7 +35,7 @@
 
 <style lang="scss" scoped>
   
-    @import '../components/_app.scss';
+    @import '../../components/_app.scss';
     
 
     .title{

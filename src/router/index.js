@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import CursosPage from '@/views/CursosPage'
+import CursosPage from '@/views/cursos/CursosPage'
+import DetailCursosPage from '@/views/cursos/DetailCursosPage'
 import ProfesoresPage from '@/views/ProfesoresPage'
 import AlumnosPage from '@/views/alumnos/AlumnosPage'
 import AlumnosA from '@/views/alumnos/AlumnosA'
@@ -8,7 +9,7 @@ import AlumnosB from '@/views/alumnos/AlumnosB'
 import AlumnosC from '@/views/alumnos/AlumnosC'
 import AlumnosD from '@/views/alumnos/AlumnosD'
 import ContactoPage from '@/views/alumnos/ContactoPage'
-import Page404 from '@/views/Page404'
+import Page404 from '@/views/home/Page404'
 
 const routes = [
  
@@ -18,6 +19,11 @@ const routes = [
     name: 'cursos'
   },
   {
+    path:'/lista-cursos/:id',
+    component: DetailCursosPage,
+    name: 'cursos-detail'
+  },
+  {
     path:'/profesores',
     component: ProfesoresPage,
     name: 'profesores'
@@ -25,7 +31,7 @@ const routes = [
   {
     path:'/alumnos',
     component: AlumnosPage,
-   // name: 'alumnos', le saco el path a alimnos A para que directamente muestre el contenido
+   // name: 'alumnos', le saco el path a alumnos A para que directamente muestre el contenido
     children: [
       {
         path:'',
