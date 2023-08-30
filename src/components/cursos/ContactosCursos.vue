@@ -46,6 +46,9 @@
                 }
             this.verificarInscripcion()
         },
+        beforeMount (){
+            console.log('%c Se ejecuta antes de montar el componente en pantalla', 'background:green; color: white; font-size: 20px;')
+        },
         methods: {
             verificarInscripcion: function(){
                 console.log('Verificando ....')

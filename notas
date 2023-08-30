@@ -8,3 +8,8 @@ Clase 067 - Requerimiento panel de navegación
 arrancando 71
 clase 73 teoría ciclo de vida de un componente
 arranco x 75
+
+clase 77: el beforeMount, corre lo mismo que el create, y el create que el beforeCreate
+el beforeCreate hace el proceso cuando la data esta en el navegador
+el create hace esos procesos antes que la info haya llegado al navegador;
+el beforeMount ya corre todo en vista del cliente
