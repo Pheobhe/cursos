@@ -5,11 +5,13 @@
             type="email"
             class="contacto__in"
             placeholder="Ingrese email"
+            v-model="email"
         >
         <input
             type="text"
             class="contacto__in"
             placeholder="Ingrese mensaje"
+            v-model="fullName"
         >
         <button class="contacto__btn">Enviar</button>
  
@@ -33,6 +35,21 @@
             console.log(this.email)
             console.log(this.$route.params.id)
             console.log(this.titulo)
+        },
+        created: function(){
+            console.log('%c Se ha creado la instancia de Vue', 'background:blue; color: white; font-size: 20px;')
+            if (this.$route.params.id === 0){
+                this.email = 'otrosdata@gmail.com'
+            }
+            else{
+                this.email = 'otrosdata@gmail.com'
+                }
+            this.verificarInscripcion()
+        },
+        methods: {
+            verificarInscripcion: function(){
+                console.log('Verificando ....')
+            }
         },
     }
 </script>
