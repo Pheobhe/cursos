@@ -20,4 +20,13 @@ mounted es la funcion mas usaba en el ciclo de vida de los componentes.
  
  beforeUpdate: se usa para que se rendereize o se redibuje lo que tenemos en pantalla
 
+
  update y unMount se utilizan generalmente mas en animaciones
+
+
+80 Peticiones a servidor, practicas:
+instalar: npm install axios --save
+utilizando esta herramineta vamos a realizar peticiones a una bd mediante 
+una url, que venga desde un sericio rest
+ver promesa en javascript, que es como nos devuelve axios desde la url la data al return
+    VER FUNDAMENTOS VUE, Y FUNCADMENTOS javascript

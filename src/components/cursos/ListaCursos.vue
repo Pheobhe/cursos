@@ -8,7 +8,7 @@
 </template>
 
 <script>
-
+import axios from 'axios'
 import VLista from '@/components/base/VLista'
 
 export default {
@@ -23,15 +23,27 @@ export default {
         data() {
             return {
             lista: [
-                {id:0, name:'Curso profesional de Django'},
-                {id:1, name:'Curso profesional de Vue'},
-                {id:2, name:'Curso profesional de JS'},
-                {id:3, name:'Curso profesional de Laravel'},
-                {id:4, name:'Curso profesional de Buenos Modales'},
+                // {id:0, name:'Curso profesional de Django'},
+                // {id:1, name:'Curso profesional de Vue'},
+                // {id:2, name:'Curso profesional de JS'},
+                // {id:3, name:'Curso profesional de Laravel'},
+                // {id:4, name:'Curso profesional de Buenos Modales'},
                 ]
             }
        
         },
+        methods:  {
+            cargarCursos: function (){
+            axios.get('https://servicios.neunapp.com/api/cursos/').then(
+                (response) => {
+                    this.lista = response.data.results
+                }
+            )    
+            }
+        },
+        mounted (){
+            this.cargarCursos()
+        }
        
     }
 </script>
