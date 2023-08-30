@@ -50,9 +50,22 @@
             console.log('%c Se ejecuta antes de montar el componente en pantalla', 'background:green; color: white; font-size: 20px;')
         },
         mounted: function (){
-            console.log('%c yatenemos el componente montado en pantala', 'background:yellow; color: white; font-size: 20px;')
+            console.log('%c ya tenemos el componente montado en pantalla', 'background:orange; color: white; font-size: 20px;')
             this.verificarInscripcion()
         },
+        beforeUpdate () {
+            console.log('%c Estamos por redibujar el componente', 'background:yellow; color: white; font-size: 20px;')    
+        },
+        updated (){
+            console.log('%c Componente redibujado', 'background:pink; color: white; font-size: 20px;')    
+        },
+        beforeUnmount (){
+            console.log('%c Antes de eliminar', 'background:red; color: white; font-size: 20px;')    
+        },
+        unmounted (){
+            console.log('%c Componente eliminado', 'background:yellowgreen; color: white; font-size: 20px;')    
+        },
+
         methods: {
             verificarInscripcion: function(){
                 console.log('Verificando ....')
