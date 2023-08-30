@@ -13,3 +13,7 @@ clase 77: el beforeMount, corre lo mismo que el create, y el create que el befor
 el beforeCreate hace el proceso cuando la data esta en el navegador
 el create hace esos procesos antes que la info haya llegado al navegador;
 el beforeMount ya corre todo en vista del cliente
+
+Clase 078 - Función mounted - Ciclo de vida de un componente
+mounted es la funcion mas usaba en el ciclo de vida de los componentes.
+ QUE SE HACE EN EL MOUNTED: ACCEDER A VALORES QUE TENGAMOS EN EL template

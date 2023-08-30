@@ -13,7 +13,7 @@
             placeholder="Ingrese mensaje"
             v-model="fullName"
         >
-        <button class="contacto__btn">Enviar</button>
+        <button ref="boton" class="contacto__btn">Enviar</button>
  
     </div>
 </template>
@@ -44,14 +44,20 @@
             else{
                 this.email = 'otrosdata@gmail.com'
                 }
-            this.verificarInscripcion()
+            
         },
         beforeMount (){
             console.log('%c Se ejecuta antes de montar el componente en pantalla', 'background:green; color: white; font-size: 20px;')
         },
+        mounted: function (){
+            console.log('%c yatenemos el componente montado en pantala', 'background:yellow; color: white; font-size: 20px;')
+            this.verificarInscripcion()
+        },
         methods: {
             verificarInscripcion: function(){
                 console.log('Verificando ....')
+                console.log('Recuperando Boton', this.$refs.boton)
+                this.$refs.boton.style.color = 'red'
             }
         },
     }
