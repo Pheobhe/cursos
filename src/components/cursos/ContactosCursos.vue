@@ -19,9 +19,21 @@
 <script>
     export default {
         name: 'ContactosCursos',
+        data() {
+            return{
+                email:'data@gmail.com',
+                fullName:''
+            }
+        },
         props: {
             titulo: String
-        }
+        },
+        beforeCreate: function() {
+            console.log('Funcion  que se ejecuta antes de ser creada')
+            console.log(this.email)
+            console.log(this.$route.params.id)
+            console.log(this.titulo)
+        },
     }
 </script>
 
